@@ -95,14 +95,17 @@ var main = function () {
 	//END DEFAULTS	
 	//Set color to be darkened when mouseover
 	$('.tile').mouseover(function () {
-		$('.tile').css("opacity", 0.5);
-		$(this).css("opacity", 1);
-		$(this).removeClass('willfade');
+		if($(this).css("opacity") == 0.5){
+			$(this).css("opacity", 1);
+			$(this).removeClass('willfade');
+		}
 	});
 	//Reset color when mouse leaves
 	$('.tile').mouseleave(function () {
-		$(this).css("opacity", 0.5);
-		$(this).addClass('willfade');
+		if($(this).css("opacity") == 1){
+			$(this).css("opacity", 0.5);
+			$(this).addClass('willfade');
+		}
 	});
 	$('.tile').click(function () {
 		inplay = true;
