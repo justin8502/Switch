@@ -1,2 +1,2 @@
-# Switch-
-HTML/CSS/Javascript Project
+# Switch
+Game revolving around matching tile colors. 
